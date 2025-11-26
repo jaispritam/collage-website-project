@@ -1,0 +1,269 @@
+/* ---------------------------------------------------------
+   GLOBAL STYLES
+--------------------------------------------------------- */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Poppins", sans-serif;
+}
+
+body {
+    background: #eef3f7;
+    color: #222;
+    line-height: 1.6;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+/* ---------------------------------------------------------
+   NAVBAR
+--------------------------------------------------------- */
+nav {
+    background: #003d66;
+    padding: 12px 40px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    box-shadow: 0 3px 8px rgba(0,0,0,0.25);
+}
+
+nav .logo {
+    width: 55px;
+    height: 55px;
+    background-image: url('https://images.shiksha.com/mediadata/images/1686933236phpSl9HCQ.jpeg');
+    background-size: contain;
+    background-repeat: no-repeat;
+}
+
+nav ul {
+    display: flex;
+    list-style: none;
+}
+
+nav ul li {
+    margin-left: 22px;
+}
+
+nav ul li a {
+    color: #fff;
+    text-decoration: none;
+    font-weight: 500;
+    transition: 0.3s;
+    padding: 8px 12px;
+    border-radius: 5px;
+}
+
+nav ul li a:hover {
+    background: #ffdd57;
+    color: #003d66;
+}
+
+/* ---------------------------------------------------------
+   HERO SECTION
+--------------------------------------------------------- */
+.hero {
+    position: relative;
+    background-image: url('https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQCKqhnNNNJK2MPA2M41OlBQqe9mX6jVhbPeA&s');
+    background-size: cover;
+    background-position: center;
+    height: 100vh;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    padding: 0 20px;
+    color: #fff;
+}
+
+.hero::after {
+    content: "";
+    position: absolute;
+    top: 0; 
+    left: 0;
+    width: 100%; 
+    height: 100%;
+    background: rgba(0,0,0,0.0);
+    z-index: 0;
+}
+
+.hero-content {
+    position: relative;
+    z-index: 1;
+    max-width: 650px;
+    transform: translateY(-20px);
+    animation: fadeIn 1.2s ease;
+}
+
+.hero h1 {
+    font-size: 52px;
+    font-weight: 700;
+    margin-bottom: 10px;
+    text-shadow: 2px 2px 6px rgba(0,0,0,0.6);
+}
+
+.hero p {
+    font-size: 20px;
+    opacity: 0.95;
+    text-shadow: 1px 1px 4px rgba(0,0,0,0.5);
+}
+
+.hero h1:hover,
+.hero p:hover {
+    text-shadow: 0 0 5px rgba(255,255,255,0.45);
+    transition: 0.3s ease-in-out;
+}
+
+
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(20px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+/* ---------------------------------------------------------
+   MAIN CONTENT SECTION
+--------------------------------------------------------- */
+.container {
+    padding: 50px 10%;
+    background: #fff;
+    margin: 40px auto;
+    max-width: 1200px;
+    border-radius: 12px;
+    box-shadow: 0 4px 16px rgba(0,0,0,0.1);
+}
+
+h2 {
+    color: #003d66;
+    margin-bottom: 12px;
+    font-size: 30px;
+    font-weight: 700;
+    border-left: 6px solid #003d66;
+    padding-left: 12px;
+}
+
+p {
+    font-size: 17px;
+    margin-top: 8px;
+    color: #333;
+}
+
+/* ---------------------------------------------------------
+   EVENTS GRID / CARDS
+--------------------------------------------------------- */
+.events-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+    gap: 25px;
+    margin-top: 30px;
+}
+
+.event-card {
+    background: #fff;
+    border-radius: 12px;
+    overflow: hidden;
+    box-shadow: 0 4px 14px rgba(0,0,0,0.12);
+    transition: 0.3s ease;
+}
+
+.event-card:hover {
+    transform: translateY(-6px);
+    box-shadow: 0 12px 24px rgba(0,0,0,0.18);
+}
+
+.event-card img {
+    width: 100%;
+    height: 170px;
+    object-fit: cover;
+}
+
+.event-card h3 {
+    margin: 15px;
+    font-size: 20px;
+    color: #003d66;
+}
+
+.event-card p {
+    margin: 0 15px 15px;
+    font-size: 15px;
+}
+
+/* ---------------------------------------------------------
+   FOOTER
+--------------------------------------------------------- */
+footer {
+    background: #003d66;
+    color: #fff;
+    text-align: center;
+    padding: 18px;
+    font-size: 14px;
+    margin-top: 0px;
+    box-shadow: 0 -3px 8px rgba(0,0,0,0.25);
+}
+
+
+/* ---------------------------------------------------------
+   addmission form
+--------------------------------------------------------- */
+
+.admission-form {
+    margin-top: 40px;
+    padding: 25px;
+    background: #f7f9fb;
+    border-radius: 12px;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.08);
+}
+
+.admission-form h3 {
+    color: #003d66;
+    margin-bottom: 20px;
+    border-left: 5px solid #003d66;
+    padding-left: 10px;
+    font-size: 24px;
+}
+
+.admission-form form {
+    display: flex;
+    flex-direction: column;
+    gap: 18px;
+}
+
+.admission-form input,
+.admission-form select,
+.admission-form textarea {
+    padding: 12px;
+    border-radius: 8px;
+    border: 1px solid #ccc;
+    font-size: 16px;
+    outline: none;
+    transition: 0.3s;
+}
+
+.admission-form input:focus,
+.admission-form select:focus,
+.admission-form textarea:focus {
+    border-color: #003d66;
+    box-shadow: 0 0 6px rgba(0,61,102,0.35);
+}
+
+.admission-form button {
+    width: 180px;
+    padding: 12px;
+    background: #003d66;
+    color: white;
+    font-size: 17px;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.admission-form button:hover {
+    background: #ffdd57;
+    color: #003d66;
+}
